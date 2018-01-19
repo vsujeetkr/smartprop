@@ -249,9 +249,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'smartproperties',
+      'database' => 'smartprop',
       'username' => 'root',
-      'password' => '',
+      'password' => 'sujeet@123',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',

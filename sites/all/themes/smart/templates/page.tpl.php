@@ -73,18 +73,79 @@
  * @ingroup templates
  */
 ?>
+<!-- ========================= Top  Header Section Start  ============================== -->
+<div class="top-header">
+ <div class="container">
+   <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="left-top-header">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="top-site-logo">
+            <?php if ($logo): ?>
+              <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+               <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+              </a>
+            <?php endif; ?>
+            <?php if (!empty($site_name)): ?>
+              <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+            <?php endif; ?>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="top-contact-number number-one">
+            <p>
+              <i class="fa fa-phone pull-left"></i>
+              <span class="phone">123-456-7890</span><br>
+              <span class="info">info@example.com</span>
+            </p>
+          </div>
+          <div class="top-social-icon icon-two">
+            <ul class="list-unstyled list-inline">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+   </div>
+   <div class="col-md-6 col-md-6 col-sm-12">
+      <div class="right-top-header">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="top-contact-address">
+            <p>                
+              <i class="fa fa-home pull-left"></i>
+              <span class="address-title">777 Seventh Avenue</span><br>
+              <span class="address-desc">Downtown NY 01234</span>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="top-social-icon icon-one">
+            <ul class="list-unstyled list-inline">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+          <div class="top-contact-number number-two">
+            <p>
+              <i class="fa fa-phone pull-left"></i>
+              <span class="phone">123-456-7890</span><br>
+              <span class="info">info@example.com</span>
+            </p>
+          </div>
+        </div>
+      </div>
+   </div>
+ </div>
+</div>
+<!-- ========================= Top  Header Section End ============================== -->
+
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
     <div class="navbar-header">
-      <?php if ($logo): ?>
-        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
-      <?php endif; ?>
-
-      <?php if (!empty($site_name)): ?>
-        <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-      <?php endif; ?>
 
       <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -114,7 +175,7 @@
   </div>
 </header>
 
-<div class="main-container <?php print $container_class; ?>">
+<div class="main-container <?php print $container_class; ?> content-start">
 
   <header role="banner" id="page-header">
     <?php if (!empty($site_slogan)): ?>
