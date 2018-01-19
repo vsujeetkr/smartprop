@@ -1,0 +1,20 @@
+@font-face {
+ font-family: 'Montserrat-Regular';
+ src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+ font-family: 'FontAwesome';
+ src: url('../fonts/FontAwesome.otf');
+}
+
+@font-face {
+    font-family: 'DosisBold';
+    src: url('../fonts/dosis-bold.eot');
+    src: url('../fonts/dosis-bold.eot') format('embedded-opentype'),
+         url('../fonts/dosis-bold.woff2') format('woff2'),
+         url('../fonts/dosis-bold.woff') format('woff'),
+         url('../fonts/dosis-bold.ttf') format('truetype'),
+         url('../fonts/dosis-bold.svg#DosisBold') format('svg');
+}
+
