@@ -82,7 +82,8 @@
           <div class="top-site-logo">
             <?php if ($logo): ?>
               <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-               <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+               <i class="fa fa-home"></i>
+               <!-- <img src="<?php //print $logo; ?>" alt="<?php //print t('Home'); ?>" /> -->
               </a>
             <?php endif; ?>
             <?php if (!empty($site_name)): ?>
@@ -226,8 +227,10 @@
   </div>
 </div>
 
-<?php if (!empty($page['footer'])): ?>
-  <footer class="footer <?php print $container_class; ?>">
-    <?php print render($page['footer']); ?>
-  </footer>
-<?php endif; ?>
+<div id="footer-wrapper" class="footer-wrapper">
+  <?php if (!empty($page['footer'])): ?>
+    <footer class="footer <?php print $container_class; ?>">
+      <?php print render($page['footer']); ?>
+    </footer>
+  <?php endif; ?>
+</div>

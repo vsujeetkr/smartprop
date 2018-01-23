@@ -28,12 +28,43 @@
     width: 100%;
     background: #27da93 none repeat scroll 0 0;
     border: none;
+    margin-bottom: 0px;
 }
 .navbar-nav > li > a {
     padding: 15px 30px 15px 30px;
     color: #fff!important;
     font-size: 1em;
     font-family: 'Montserrat-Regular';
+}
+
+.navbar-nav > li > a > i.fa-home {
+    font-size: 32px!important;
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+}
+.navbar-nav > li > a > i.fa-user {
+    font-size: 32px!important;
+    width: 25px;
+    margin: 0 auto;
+    display: block;
+}
+.navbar-nav > li > a > i.fa-building {
+    font-size: 32px!important;
+    width: 26px;
+    margin: 0 auto;
+    display: block;
+}
+.navbar-nav > li > a > i.fa-map-marker {
+    font-size: 32px!important;
+    width: 20px;
+    margin: 0 auto;
+    display: block;
+}
+
+.top-header .logo i {
+    font-size: 34px;
+    color: #000000;
 }
 
 .navbar-nav > li > a:hover,
@@ -142,11 +173,12 @@
 .top-header .left-top-header .top-contact-number p span.phone,
 .top-header .right-top-header .top-contact-address p span.address-title {
 	font-weight: bold;
+    font-family: DosisBold;
 }
 
 .top-header .left-top-header .top-site-logo a.name {
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 28px;
+    font-family: DosisBold;
     text-transform: uppercase;
     color: #27DA93;
     padding: 15px 0px;
@@ -161,9 +193,8 @@
     width: 190px;
     margin: 5px auto 0 auto;
 }
-
-.top-header .right-top-header {
-	text-align: right;
+.top-header .right-top-header .top-social-icon.icon-one {
+    float: right;
 }
 .top-header .right-top-header .top-social-icon ul {
 	margin-bottom: 0px;
@@ -182,6 +213,39 @@
 } 
 /* ========================= Top  Header Section End ============================== */
 
+/* ========================= Main Property Slider Start ============================== */
+.main-banner {
+    width: 100%;
+    float: left;    
+}
+
+.main-banner .view-main-property-slider .slides .views-field-body {
+    float: left;
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    color: white;
+}
+
+.main-banner .view-main-property-slider .flex-control-nav {;
+    bottom: 15px;
+    z-index: 2;
+}
+
+.main-banner .view-main-property-slider .flex-control-paging li a {
+    background: transparent;
+    box-shadow: none;
+    border: 2px solid #fff;
+}
+
+.main-banner .view-main-property-slider .flex-control-paging li a.flex-active {
+    background: #ffffff;
+}
+.main-banner .view-main-property-slider .flex-direction-nav {
+    display: none;
+}
+/* ========================= Main Property Slider End ============================== */
+
 /*========================== Main Content Start =================================== */
 
 .content-start {
@@ -192,10 +256,41 @@
 /*========================== Main Content End ===================================== */
 
 /*========================== Footer Start =================================== */
+#footer-wrapper {
+    background: url(../images/pattern_bg.jpg) repeat left top;
+    float: left;
+    width: 100%;
+}
 
 .footer {
 	width: 100%;
 	float: left;
+    margin-top: 0px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.footer .footer-logo p {
+    margin: 0;
+    color: #fff;
+    font-family: DosisBold;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.footer .footer-class {
+    padding: 11px 0;
+    text-align: right;
+}
+
+.footer .footer-class p {
+    color: #797979;
+}
+.footer .footer-class p a {
+    color: #797979;
+}
+.footer .footer-class p a:hover {
+    color: #fff;
+    text-decoration: none;
 }
 
 /*========================== Footer End ===================================== */
@@ -268,16 +363,13 @@
 @media only screen and (max-width: 767px) {
 	.top-header .left-top-header .top-site-logo {
 	    margin: 0 auto;
-	    width: 158px;
+	    width: 175px;
 	}
 	.top-social-icon.icon-two {
 	    float: left;
 	    width: 100%;
 	}
-	.navbar-default .navbar-nav > li a i.home-loans,
-	.navbar-default .navbar-nav > li a i.dealers,
-	.navbar-default .navbar-nav > li a i.projects,
-	.navbar-default .navbar-nav > li a i.resale {
+	.navbar-default .navbar-nav > li a i {
 		float: left;
 		display: none;
 	}
@@ -296,6 +388,32 @@
 	    background-color: #000!important;
 	    color: #fff!important;
 	}
+
+    .main-banner .view-main-property-slider .flex-control-nav {;
+        bottom: -30px;
+        z-index: 2;
+    }
+
+    .main-banner .view-main-property-slider .flex-control-paging li a {
+        background: transparent;
+        box-shadow: none;
+        border: 2px solid #000000;
+    }
+
+    .main-banner .view-main-property-slider .flex-control-paging li a.flex-active {
+        background: #000000;
+    }
+    .main-banner .view-main-property-slider .slides .views-field-body {
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .footer .footer-logo, .footer .footer-class {
+        text-align: center;
+    }
 }
 
 /* ========================= Responsiv Screen Style End ========================= */

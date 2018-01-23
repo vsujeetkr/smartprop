@@ -82,7 +82,8 @@
           <div class="top-site-logo">
             <?php if ($logo): ?>
               <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-               <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+               <i class="fa fa-home"></i>
+               <!-- <img src="<?php //print $logo; ?>" alt="<?php //print t('Home'); ?>" /> -->
               </a>
             <?php endif; ?>
             <?php if (!empty($site_name)): ?>
@@ -115,7 +116,7 @@
           <div class="top-contact-address">
             <p>                
               <i class="fa fa-home pull-left"></i>
-              <span class="address-title">777 Seventh Avenue</span><br>
+              <span class="address-title">123 Seventh Avenue</span><br>
               <span class="address-desc">Downtown NY 01234</span>
             </p>
           </div>
@@ -175,6 +176,12 @@
   </div>
 </header>
 
+<!-- ========================= Main Property Slider Start ============================== -->
+<div id="main-banner" class="main-banner" >
+  <?php print render($page['slider']); ?>
+</div>
+<!-- ========================= Main Property Slider Start ============================== -->
+
 <div class="main-container <?php print $container_class; ?> content-start">
 
   <header role="banner" id="page-header">
@@ -216,9 +223,10 @@
 
   </div>
 </div>
-
-<?php if (!empty($page['footer'])): ?>
-  <footer class="footer <?php print $container_class; ?>">
-    <?php print render($page['footer']); ?>
-  </footer>
-<?php endif; ?>
+<div id="footer-wrapper" class="footer-wrapper">
+  <?php if (!empty($page['footer'])): ?>
+    <footer class="footer <?php print $container_class; ?>">
+      <?php print render($page['footer']); ?>
+    </footer>
+  <?php endif; ?>
+</div>
