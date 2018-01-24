@@ -21,7 +21,7 @@
     float: left;
     width: 100%;
 }
-/* ========================= Top  Header Section End ============================== */
+/* ========================= Top  Header Section Start ============================== */
 
 #navbar {
 	float: left;
@@ -64,7 +64,7 @@
 
 .top-header .logo i {
     font-size: 34px;
-    color: #000000;
+    color: #919090;
 }
 
 .navbar-nav > li > a:hover,
@@ -157,10 +157,10 @@
 }
 .top-header .left-top-header .top-contact-number p i,
 .top-header .right-top-header .top-contact-address p i {
-    border: 1px solid #ababab;
+    border: 1px solid #919090;
     border-radius: 100px;
     color: #27DA93;
-    display: block;
+    display: block;   
     font-size: 20px;
     height: 36px;
     margin-top: 2px;
@@ -193,19 +193,37 @@
     width: 190px;
     margin: 5px auto 0 auto;
 }
+
+.top-contact-number p span.info,
+.top-contact-address p span.address-desc {
+    color: #919090;
+}
 .top-header .right-top-header .top-social-icon.icon-one {
     float: right;
 }
 .top-header .right-top-header .top-social-icon ul {
 	margin-bottom: 0px;
-	padding: 13px;
+	padding: 7px;
 }
+.top-header .right-top-header .top-social-icon ul li a {
+    text-decoration: none;
+}
+
 .top-header .right-top-header .top-social-icon ul li a i {
-	font-size: 20px;
-	color: #27DA93;
+    font-size: 20px;
+    color: #27DA93;
+    border-radius: 100px;
+    border: 1px solid #919090;
+    display: block;
+    height: 36px;
+    width: 36px;
+    text-align: center;
+    padding-top: 7px;
 }
+
 .top-header .right-top-header .top-social-icon ul li a i:hover {
 	color: #000000;
+    text-decoration: none;
 }    
 
 .number-two, .icon-two {
@@ -217,6 +235,10 @@
 .main-banner {
     width: 100%;
     float: left;    
+}
+
+.main-banner .flexslider {
+    margin: 0px;
 }
 
 .main-banner .view-main-property-slider .slides .views-field-body {
@@ -247,12 +269,55 @@
 /* ========================= Main Property Slider End ============================== */
 
 /*========================== Main Content Start =================================== */
-
 .content-start {
 	width: 100%;
 	float: left;
 }
 
+.title-green {
+    color: #27DA93;
+}
+.content-start section.block {
+    width: 100%;
+    float: left;
+}
+#block-block-2 {
+    text-align: center;
+    padding: 50px 0;
+}
+#block-block-2 h2.block-title {
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 28px;
+    position: relative;
+}
+#block-block-2 .about-text p {
+    width: 50%;
+    margin: 0 auto;
+    color: #919090;
+}
+#block-block-2 h2.block-title::after {
+    background: #000 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    margin-bottom: 8px;
+    margin-left: -25px;
+    position: absolute;
+    width: 50px;
+}
+#block-block-2 h2.block-title::before {
+    background: #27DA93 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    margin-left: -75px;
+    position: absolute;
+    width: 150px;
+}
 /*========================== Main Content End ===================================== */
 
 /*========================== Footer Start =================================== */
@@ -300,14 +365,22 @@
 
 @media only screen and (max-width: 1199px) {
 	.top-header .left-top-header .top-site-logo a.name {
-		font-size: 20px;
+		font-size: 28px;
 	}
+
+    .top-header .right-top-header .top-social-icon ul li {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #block-block-2 h2.block-title {
+        font-size: 40px;
+    }
 }
 
 @media only screen and (max-width: 991px) {
 	.top-header .left-top-header .top-site-logo {
 	    margin: 0 auto;
-	    width: 51%;
+	    width: 177px;
 	}
 	.number-one, .icon-one {
 		display: none;
@@ -317,14 +390,26 @@
 	}
 	.top-header .left-top-header .top-social-icon ul {
 		margin-bottom: 0px;
-		padding: 15px;
+		padding: 7px;
 	}
 	.top-header .left-top-header .top-social-icon ul li a i {
-		font-size: 18px;
-		color: #27DA93;
+        font-size: 20px;
+        color: #27DA93;
+        border-radius: 100px;
+        border: 1px solid #919090;
+        display: block;
+        height: 36px;
+        width: 36px;
+        text-align: center;
+        padding-top: 7px;
 	}
+    .top-header .left-top-header .top-social-icon ul li a:hover {
+        color: #000000;
+        text-decoration: none;
+    }
 	.top-header .left-top-header .top-social-icon ul li a i:hover {
 		color: #000000;
+        text-decoration: none;
 	} 
 	.top-header .right-top-header .top-contact-number p i {
 	    border: 1px solid #ababab;
@@ -363,7 +448,7 @@
 @media only screen and (max-width: 767px) {
 	.top-header .left-top-header .top-site-logo {
 	    margin: 0 auto;
-	    width: 175px;
+	    width: 185px;
 	}
 	.top-social-icon.icon-two {
 	    float: left;
@@ -413,6 +498,27 @@
     }
     .footer .footer-logo, .footer .footer-class {
         text-align: center;
+    }
+
+    .top-header .left-top-header .top-social-icon ul li a i {
+        font-size: 18px;
+        height: 34px;
+        width: 34px;
+    }
+    #block-block-2 h2.block-title {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #block-block-2 h2.block-title {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #block-block-2 h2.block-title {
+        font-size: 20px;
     }
 }
 
