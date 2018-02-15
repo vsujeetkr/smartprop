@@ -180,7 +180,31 @@
 <div id="main-banner" class="main-banner" >
   <?php print render($page['slider']); ?>
 </div>
-<!-- ========================= Main Property Slider Start ============================== -->
+<!-- ========================= Main Property Slider End ============================== -->
+
+<!-- ========================= Site Message Start ============================== -->
+<div class="site-mssg">
+  <div class="main-container <?php print $container_class; ?>">
+    <?php print $messages; ?>
+  </div>
+</div>
+<!-- ========================= Site Message End ============================== -->
+
+<!-- =========================== About Smart Prop Start ================================ -->
+<div class="about-sp">
+  <div class="main-container <?php print $container_class; ?>">
+      <?php if (!empty($page['header'])): ?>
+      <?php print render($page['header']); ?>
+      <?php endif; ?>
+  </div>
+  <div class="about-sp-bttn">
+      <?php if (!empty($page['about_sp'])): ?>
+          <?php print render($page['about_sp']); ?>
+      <?php endif; ?>
+  </div>
+</div>
+<!-- =========================== About Smart Prop End ================================ -->
+
 <div class="content-start">
   <div class="main-container <?php print $container_class; ?>">
 
@@ -188,8 +212,6 @@
       <?php if (!empty($site_slogan)): ?>
         <p class="lead"><?php print $site_slogan; ?></p>
       <?php endif; ?>
-
-      <?php print render($page['header']); ?>
     </header> <!-- /#page-header -->
 
     <div class="row">
@@ -205,7 +227,6 @@
           <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
         <?php endif; ?>
         <a id="main-content"></a>
-        <?php print $messages; ?>
         <?php if (!empty($page['help'])): ?>
           <?php print render($page['help']); ?>
         <?php endif; ?>
@@ -224,6 +245,17 @@
     </div>
   </div>
 </div>
+
+<!-- =========================== Content Bottom Start ================================ -->
+<div class="content-bottom">
+  <div class="content-botton-bttn">
+      <?php if (!empty($page['content_bottom'])): ?>
+          <?php print render($page['content_bottom']); ?>
+      <?php endif; ?>
+  </div>
+</div>
+<!-- =========================== Content Bottom End ================================ -->
+
 <div id="footer-wrapper" class="footer-wrapper">
   <?php if (!empty($page['footer'])): ?>
     <footer class="footer <?php print $container_class; ?>">

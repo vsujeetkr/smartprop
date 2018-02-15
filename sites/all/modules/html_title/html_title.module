@@ -97,24 +97,26 @@ function html_title_views_pre_render(&$view) {
  * cases depending on which views plugin is being used. Nodereference
  * autocomplete fields are an example.
  */
-function html_title_views_view_field__title($view, $field, $row) {
+function html_title_views_view_field__title($variables) {
   // Strip tags instead of rendering for some types of views plugins
-  if ($view->plugin_name == 'content_php_array_autocomplete') {
-    return strip_tags($row->node_title);
+  if ($variables['view']->plugin_name == 'content_php_array_autocomplete') {
+    return strip_tags($variables['row']->node_title);
   }
 
   // Store title and do XSS filtering
   $elements = variable_get('html_title_allowed_elements', array('em', 'sub', 'sup'));
-  $title = filter_xss($row->node_title, $elements);
+  $title = filter_xss($variables['row']->node_title, $elements);
 
   // Replace title with our placeholder
-  $row->node_title = '%%%HTML_TITLE_PLACEHOLDER%%%';
+  $variables['row']->node_title = '%%%HTML_TITLE_PLACEHOLDER%%%';
 
   // Pass rendering on to the default rendering
-  $output = $view->field['title']->advanced_render($row);
+  $output = $variables['view']->field['title']->advanced_render($variables['row']);
 
   // Restore our filtered title
   $output = str_replace('%%%HTML_TITLE_PLACEHOLDER%%%', $title, $output);
+
+  $variables['field']->last_render = $output;
 
   return $output;
 }

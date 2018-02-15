@@ -175,6 +175,26 @@
     <?php endif; ?>
   </div>
 </header>
+
+<!-- ========================= Top  Header Section End ============================== -->
+<div class="header-banner blog-banner">
+    <div class="banner-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <?php if (!empty($title)): ?>
+                    <h2 class="header-title"><?php print $title; ?></h2>
+                    <?php endif; ?>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ========================= Top  Header Section End ============================== -->
+
 <div class="content-start">
   <div class="main-container <?php print $container_class; ?>">
 
@@ -198,17 +218,8 @@
         <?php if (!empty($page['highlighted'])): ?>
           <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
         <?php endif; ?>
-        <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
         <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
-        <?php if (!empty($title)): ?>
-          <h1 class="page-header"><?php print $title; ?></h1>
-        <?php endif; ?>
-        <?php print render($title_suffix); ?>
         <?php print $messages; ?>
-        <?php if (!empty($tabs)): ?>
-          <?php print render($tabs); ?>
-        <?php endif; ?>
         <?php if (!empty($page['help'])): ?>
           <?php print render($page['help']); ?>
         <?php endif; ?>
