@@ -263,3 +263,27 @@
     </footer>
   <?php endif; ?>
 </div>
+
+<script>
+    jQuery(".view-testimonials .view-content").owlCarousel({
+
+        autoplay: 3000, 
+        dots: true,
+        items: 3,
+        addClassActive: true,
+        center: true,
+        loop: true,
+        responsiveClass: true,
+        responsive: {
+            0:{
+              items: 1
+            },
+            480:{
+              items: 2
+            },
+            769:{
+              items: 3
+            }
+        }
+    });
+</script>

@@ -3,27 +3,14 @@
 // 	jQuery( ".view-testimonials .owl-carousel .owl-wrapper .owl-item:nth-child(5)").addClass("middle");
 // });
 
-(function($) {
+// (function($) {
 
-  Drupal.behaviors.mh_custom = {
-    attach : function(context, settings) {
-      var callbacks = {autoplay: true, center: true, loop: true, nav: true,};
-      for (var carousel in settings.owlcarousel) {
-        if (carousel === 'owl-carousel-block_14') {
+// 	$('.owl-carousel').owlCarousel({
+//         autoPlay: 3000, //Set AutoPlay to 3 seconds
+//         dots: true,
+//         items: 2,
+//         itemsDesktop: [1199, 3],
+//         itemsDesktopSmall: [979, 3]
+// 	});
 
-          var abc = $.extend(true, settings.owlcarousel[carousel].settings, callbacks);
-          console.log(abc);
-        }
-      }
-    }
-  };
-
- // /**
- //   * Owl Carousel afterInit callback.
- //   */
- //  function afterOWLinit(elem) {
-	// elem.owlCarousel({
- //  		center:true,
- //  	});
- //  }
-}(jQuery));
+// }(jQuery));
