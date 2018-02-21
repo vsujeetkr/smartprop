@@ -267,7 +267,8 @@
 <script>
     jQuery(".view-testimonials .view-content").owlCarousel({
 
-        autoplay: 3000, 
+        autoplay: 5000,
+        smartSpeed: 2000,
         dots: true,
         items: 3,
         addClassActive: true,

@@ -998,7 +998,7 @@ h2.page-title::after {
     position: relative;
 }
 
-.view-testimonials.view-display-id-block_1 .owl-item.active .testimonial-comment {
+.view-testimonials.view-display-id-block_1 .owl-item .testimonial-comment {
     background: url(../images/testimonial-quote.png) no-repeat scroll 40px 30px;
     position: relative;
 }
@@ -1006,16 +1006,17 @@ h2.page-title::after {
 .view-testimonials.view-display-id-block_1 .owl-item.center .testimonial-comment .banner-overlay {
     background: unset!important;
 }
-.view-testimonials.view-display-id-block_1 .owl-item.active .testimonial-comment .banner-overlay {
+.view-testimonials.view-display-id-block_1 .owl-item .testimonial-comment .banner-overlay {
     background: rgba(0,0,0,0.7);
 }
-.view-testimonials.view-display-id-block_1 .owl-item.active .testimonial-comment p {
+.view-testimonials.view-display-id-block_1 .owl-item .testimonial-comment p {
     color: #727272;
     padding: 40px 50px 50px 50px;
     text-align: justify;
     font-size: 16px;
     line-height: 25px;
 }
+
 .view-testimonials.view-display-id-block_1 .owl-item.center .testimonial-comment p {
     color: #fff!important;
 }
@@ -1031,7 +1032,7 @@ h2.page-title::after {
     width: 0;
 }
 
-.view-testimonials.view-display-id-block_1 .owl-item.active .testimonial-comment::after {
+.view-testimonials.view-display-id-block_1 .owl-item .testimonial-comment::after {
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-top: 30px solid rgba(0,0,0,0.7);
