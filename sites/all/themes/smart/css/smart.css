@@ -234,7 +234,30 @@
     float: left;
     width: 100%;
 }
+.navbar-static-top {
+    z-index: 0;
+}
 /* ========================= Top  Header Section End ============================== */
+
+/*========================== Dialog Popup Start =====================================*/
+.ui-dialog .ui-widget-header {
+    border: 1px solid #3c3c44;
+    background: #3c3c44;
+    color: #fff;
+    border-radius: 0!important;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    font-family: FontAwesome;
+    color: #3c3c44;
+    background: #fff;
+    border: none;
+}
+
+.ui-dialog .ui-dialog-titlebar-close:before {
+    content: "\f00d";
+}
+/*========================== Dialog Popup End =======================================*/
 
 /* ========================= Main Property Slider Start ============================== */
 .main-banner {

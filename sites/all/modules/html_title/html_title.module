@@ -105,18 +105,22 @@ function html_title_views_view_field__title($variables) {
 
   // Store title and do XSS filtering
   $elements = variable_get('html_title_allowed_elements', array('em', 'sub', 'sup'));
-  $title = filter_xss($variables['row']->node_title, $elements);
+  if (isset($variables['row']->node_title)) {
+    $title = filter_xss($variables['row']->node_title, $elements);
 
-  // Replace title with our placeholder
-  $variables['row']->node_title = '%%%HTML_TITLE_PLACEHOLDER%%%';
+    // Replace title with our placeholder
+    $variables['row']->node_title = '%%%HTML_TITLE_PLACEHOLDER%%%';
 
-  // Pass rendering on to the default rendering
-  $output = $variables['view']->field['title']->advanced_render($variables['row']);
+    // Pass rendering on to the default rendering
+    $output = $variables['view']->field['title']->advanced_render($variables['row']);
 
-  // Restore our filtered title
-  $output = str_replace('%%%HTML_TITLE_PLACEHOLDER%%%', $title, $output);
+    // Restore our filtered title
+    $output = str_replace('%%%HTML_TITLE_PLACEHOLDER%%%', $title, $output);
 
-  $variables['field']->last_render = $output;
+    $variables['field']->last_render = $output;
 
-  return $output;
+    return $output;
+  } else {
+     return $variables['view']->field['title']->advanced_render($variables['row']);
+  }
 }
